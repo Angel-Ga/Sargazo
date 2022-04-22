@@ -1,0 +1,31 @@
+sim_name: 'Sz_hycom'
+point:
+  name: 'Sarga'
+  depth: '300'
+  lon: -95.80023 #-94.767358
+  lat: 19.63191 #20.040589
+model:
+  weathering: 'noaa' #'cicese'
+  log_level: 20
+  fartype: '3D Sim.' #3D Sim.
+  advection_scheme: 'runge-kutta4' # agregado Ang
+  reader_current: 'reader_amseas' # 'reader_amseas' o 'reader_hycom'
+  reader_winds: 'reader_gfswinds'
+cicoil:
+  wind_factor: 0.035
+  sim_len: 5
+  N_parti: 9000
+  step_time: 1.0
+  repo_time: 1.0
+sim:
+  StarTime: #'20220301'
+  Shour: 0
+  EndTime: #'20220304'
+  Ehour: 0
+input:
+  curr: 'hycom' # 'hycom' o 'fnmoc'
+  wind: 'gfs'
+  wave:
+datadir: "/home/driftruns/forecast-runs/data/"
+outdir: "/home/driftruns/abgarcia/"  
+
